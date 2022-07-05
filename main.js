@@ -46,9 +46,16 @@ const userUpdate = { // userConstrutorUpdate
     city: "Cidade Local",
     avatar: "https://picsum.photos/500/500",
 }
+// Deleta usuário
+function deleteUser(id){
+    axios.delete(`${url}/${id}`)
+    .then(response => console.log(response))
+    .catch(error => console.error(error) )
+}
 
 
 getUsers()
 getUser(1)
 //addNewUser(newUser)
 //updateUser(3, userUpdate)
+//deleteUser(1)
